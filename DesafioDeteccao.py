@@ -1,10 +1,10 @@
-#Bibliotecas
+#Bibliotecas bla bla bla
 import numpy as np
 
 #Constantes
 limite = 3
 
-#Classe que detecte valores fora do perfil da maioria dos valores j· inseridos anteriormente
+#Classe que detecte valores fora do perfil da maioria dos valores j√° inseridos anteriormente
 class DetectaAnomalia:
       #Construtor
       def __init__(self):
@@ -12,7 +12,7 @@ class DetectaAnomalia:
           self.media = 0
           self.desvio_padrao = 0
 
-      #Metodo para incluir valores na lista (verifica antes se valor esta dentro do perfil da maioria dos valores j· inseridos anteriormente)
+      #Metodo para incluir valores na lista (verifica antes se valor esta dentro do perfil da maioria dos valores j√° inseridos anteriormente)
       def setValorLista(self, valor):
           if len(self.lista_valores) in (0,1):
              self.lista_valores.append(valor)
@@ -26,7 +26,7 @@ class DetectaAnomalia:
              else:
                 zscore = (valor - media) / desvio_padrao
                 if np.abs(zscore) > limite:
-                   return "Valor fora do espectro j· recebido"
+                   return "Valor fora do espectro j√° recebido"
                 else:
                    self.lista_valores.append(valor)
                    return "ok"
